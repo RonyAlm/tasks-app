@@ -1,0 +1,28 @@
+GET http://localhost:3005/api/tasks
+
+### 
+GET http://localhost:3005/api/tasks/d9ffdfb3-211d-4478-b2b1-d7f827e1ed61
+
+### POST
+
+POST http://localhost:3005/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Hacer el mate 11",
+  "description": "Preparar el mate"
+}
+
+### UPDATE
+
+PUT http://localhost:3005/api/tasks/d9ffdfb3-211d-4478-b2b1-d7f827e1er61
+Content-Type: application/json
+
+{
+  "title": "Esto es una prueba de actualizacion 2",
+  "description": "descript 2",
+  "completed": true
+}
+
+### DELETE
+DELETE http://localhost:3005/api/tasks/d9ffdfb3-211d-4478-b2b1-d7f827e1ed61
