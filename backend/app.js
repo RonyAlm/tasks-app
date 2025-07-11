@@ -8,10 +8,6 @@ const tasksRouter = require('./routes/tasks')
 app.use(express.json())
 app.use(cors())
 
-app.get('/', (request, response) => {
-  response.send('<h1>Hello World!</h1>')
-})
-
 app.use('/api/tasks', tasksRouter)
 
 app.use(middleware.unknownEndpoint)
