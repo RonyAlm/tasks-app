@@ -2,7 +2,7 @@
 
 ### ✅ README Frontend (`/frontend/README.md`)
 
-```md
+
 # Frontend - Fullstack Task Manager
 
 Este frontend fue construido con **React**, **TypeScript** y **Tailwind CSS** para interactuar con una API RESTful y gestionar tareas.
