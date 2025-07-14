@@ -9,10 +9,9 @@ Este proyecto es una aplicación fullstack desarrollada como parte de un challen
 
 ## Estructura del Proyecto
 
-/ (raíz)
-├── frontend/ → Aplicación cliente en React
-├── backend/ → Servidor y API REST
-└── README.md → Documentación general
+- frontend/ → Aplicación cliente en React
+- backend/ → Servidor y API REST
+- README.md → Documentación general
 
 ---
 
@@ -60,6 +59,12 @@ Estilo moderno y responsive con Tailwind
 Comunicación entre frontend y backend mediante API RESTful
 
 ---
+
+## Capturas de Pantalla
+
+![Captura de Pantalla 1](./frontend/src/assets/img/Cap-1.png)
+
+![Captura de Pantalla 2](./frontend/src/assets/img/Cap-2.png)
 
 ## Creditos
 
