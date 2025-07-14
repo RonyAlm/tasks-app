@@ -5,9 +5,6 @@ const Task = require('../models/task')
 const getAll = async (request, response, next) => {
   try {
     const tasks = await Task.getAllTasks()
-    if (tasks.length === 0) {
-      return response.status(404).json({ error: 'tasks not found' })
-    }
     response.status(200).json(tasks)
   } catch (error) {
     next(error)

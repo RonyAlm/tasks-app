@@ -1,7 +1,7 @@
 GET http://localhost:3005/api/tasks
 
 ### 
-GET http://localhost:3005/api/tasks/d9ffdfb3-211d-4478-b2b1-d7f827e1ed61
+GET http://localhost:3005/api/tasks/f3b63480-60a5-498b-9c6a-a1a5a202cf07
 
 ### POST
 
@@ -15,12 +15,10 @@ Content-Type: application/json
 
 ### UPDATE
 
-PUT http://localhost:3005/api/tasks/d9ffdfb3-211d-4478-b2b1-d7f827e1er61
+PUT http://localhost:3005/api/tasks/f3b63480-60a5-498b-9c6a-a1a5a202cf07
 Content-Type: application/json
 
 {
-  "title": "Esto es una prueba de actualizacion 2",
-  "description": "descript 2",
   "completed": true
 }
 

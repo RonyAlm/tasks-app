@@ -6,7 +6,7 @@ const logger = require('../utils/logger')
 db.all = promisify(db.all)
 db.get = promisify(db.get)
 
-function runAsync (db, sql, params = []) {
+function runAsync(db, sql, params) {
   return new Promise((resolve, reject) => {
     db.run(sql, params, function (err) {
       if (err) return reject(err)
@@ -70,10 +70,8 @@ const updateTask = async ({ id, input }) => {
     if (!isExists || isExists.length === 0) return []
 
     const { changes } = await runAsync(db, sql, [...Object.values(input), id])
-    return changes === 1 && {
-      id,
-      ...input
-    }
+
+    return changes > 0 ? await getTaskById({ id }) : []
   } catch (error) {
     logger.error('Error updating task', error)
     return []
@@ -85,7 +83,10 @@ const deleteTask = async ({ id }) => {
     const isExists = await getTaskById({ id })
     if (!isExists || isExists.length === 0) return []
     const task = await db.run('DELETE FROM tasks WHERE id = ?', [id])
-    return task
+    return {
+      menssage: 'Task deleted successfully',
+      changes: task.changes
+    }
   } catch (error) {
     logger.error('Error deleting task', error)
     return []
